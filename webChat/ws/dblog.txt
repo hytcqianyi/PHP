@@ -1,0 +1,36 @@
+2014-09-09 17:03:18 插入 insert into userinfo(userName) values('$name')
+2014-09-09 17:03:18 查询 insert into userinfo(userName) values('$name')
+2014-09-09 17:03:18 释放结果集
+2014-09-09 17:03:18 完成整个查询任务,所用时间为0.049001932144165
+2014-09-09 17:03:42 插入 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:03:42 查询 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:03:43 释放结果集
+2014-09-09 17:03:43 完成整个查询任务,所用时间为0.058003187179565
+2014-09-09 17:05:39 插入 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:05:40 查询 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:05:40 释放结果集
+2014-09-09 17:05:40 完成整个查询任务,所用时间为0.039001941680908
+2014-09-09 17:05:43 插入 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:05:43 查询 insert into userinfo(userName) values('修罗道')
+2014-09-09 17:05:43 释放结果集
+2014-09-09 17:05:43 完成整个查询任务,所用时间为0.032001972198486
+2014-09-09 17:06:57 插入 insert into userinfo(userName) values('ff')
+2014-09-09 17:06:57 查询 insert into userinfo(userName) values('ff')
+2014-09-09 17:06:57 释放结果集
+2014-09-09 17:06:57 完成整个查询任务,所用时间为0.048003196716309
+2014-09-09 17:09:38 插入 insert into userinfo(userName) values('das')
+2014-09-09 17:09:38 查询 insert into userinfo(userName) values('das')
+2014-09-09 17:09:38 释放结果集
+2014-09-09 17:09:38 完成整个查询任务,所用时间为0.039001941680908
+2014-09-09 17:10:30 插入 insert into userinfo(userName) values('人间道')
+2014-09-09 17:10:30 查询 insert into userinfo(userName) values('人间道')
+2014-09-09 17:10:30 释放结果集
+2014-09-09 17:10:30 完成整个查询任务,所用时间为0.28801608085632
+2014-09-09 17:12:03 插入 insert into userinfo(userName) values('地狱道')
+2014-09-09 17:12:03 查询 insert into userinfo(userName) values('地狱道')
+2014-09-09 17:12:03 释放结果集
+2014-09-09 17:12:03 完成整个查询任务,所用时间为0.056003093719482
+2014-09-10 02:37:05 插入 insert into userinfo(userName) values('hhh')
+2014-09-10 02:37:06 查询 insert into userinfo(userName) values('hhh')
+2014-09-10 02:37:06 释放结果集
+2014-09-10 02:37:06 完成整个查询任务,所用时间为0.25601410865784
