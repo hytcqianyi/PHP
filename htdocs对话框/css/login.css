@@ -1,0 +1,25 @@
+*{margin: 0px;padding: 0px;}
+img{border: 0px}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+
+
+#foreground{width: 400px;height: 300px;border: 1px solid #ccc;margin:0 auto;margin-top: 100px;}
+#foretop{width: 400px;height: 40px;border-bottom: 1px solid #ccc;}
+.forelogin{line-height: 40px;font-family:宋体,Airal;float: left;display: block;font-weight: bold; margin-left: 20px;font-size: 16px;}
+#forebottom{width: 400px;height: 250px;}
+#bot{width: 300px;height: 100px;margin: 50px 50px 100px 50px;/*border: 1px solid #ccc;*/}
+.foreid input{width: 250px;height: 30px;}
+.foreid{width: 250px;height: 30px;border: 1px solid #CCC;margin-left:20px;margin-top: 10px;}
+.forepwd{width: 250px;height: 30px;border: 1px solid #CCC;margin-left:20px;margin-top: 20px;}
+.forepwd input{width: 250px;height: 30px;}
+
+.foredenglu{width: 250px;height: 40px;margin-top: 30px;border: 1px solid #ccc;margin-left: 20px;border-radius: 3px;/*background-image:url("image/denglu.jpg")*/;}
+.foredenglu input{width: 250px;height: 40px;}
+
+/*<form  action="index.php" method="post">
+     	  <input name="userid" type="text" id="txtUserid" />
+     	  <input name="userpwd" type="password" id="txtUserPwd" />
+     	  <input name="flag" type="text"/>
+     	  <input type="submit" value="登录" />
+      </form> */
