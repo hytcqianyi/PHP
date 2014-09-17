@@ -1,0 +1,171 @@
+body{font-family:"Microsoft YaHei","微软雅黑",Arial; color: #333;}
+*{margin: 0;padding: 0;}
+input{outline: none;}
+a{text-decoration: none; cursor: pointer;}
+::-webkit-input-placeholder { font-weight: 600;}
+
+/*header 开始*/
+.bg{background-image: url("images/bg.jpg"); background-size: cover; background-repeat: no-repeat;z-index: -10; position: fixed; top: 0; left: 0;right: 0;bottom: 0;}
+.header{width: 100%; height: 40px; margin-bottom: 10px; position: fixed;top: 0;z-index: 1000; background-color: #16a085; }
+.header .headerWrapper{width: 1000px; height: 40px; margin: auto}
+.headerWrapper .headerlogo{width: 105px; height: 40px; margin-right: 36px; padding: 6px 0 0 0; float: left;}
+.icon{background-image: url("images/10years-icons.png"); background-repeat: no-repeat; display: inline-block;}
+.headerlogoImg{width: 29px; height: 29px; background-position: 0 -719px; float: left;}
+.headerlogoWord{width: 76px; height: 26px; background-position: -30px -720px; float: left;}
+.headerWrapper .headerlogo:hover .headerlogoImg{-webkit-tansform:rotate(360deg); animation: logoRotate 1s linear infinite;-webkit-animation:logoRotate 1s linear infinite;-moz-animation:logoRotate 1s linear infinite;-o-animation:logoRotate 1s linear infinite;}
+
+.headerNav{width: 60px; height: 14px; float: left; padding: 13px 18px; cursor: pointer;}
+.headerNav:hover{background-color: #06755f;}
+.headerNav span{color: #fff; font-weight: 700; font-size: 14px; line-height: 14px; text-align: center; }
+.headerNavSpecial{width: 32px; position: relative;}
+.wendaoImg{position: absolute;background-position: -151px -740px;width: 18px;height: 14px;top: 3px; right: 5px;}
+.headerWrapper .headerNavSpecial:hover .wendaoImg{animation:1s ceshilogo infinite;-webkit-animation:1s ceshilogo infinite;-moz-animation:1s ceshilogo infinite;-o-animation:1s ceshilogo infinite;}
+.right{float: right;}
+/*header 结束*/
+
+
+/*主体部分 开始*/
+.mainBody{width: 100%; height:567px; position: relative;top:100px;left: 0px;overflow: hidden;}
+.mainWrapper{width:300%;position: absolute;top: 0;left:-100%;}
+.mainContent{width:1366px; height: 310px;position: absolute;top: 0; left:0;}
+.mainContentBg{width: 100%;height: 100%; position:absolute;top: 0;left: 0;z-index:-3;  background-color: #000; opacity: 0.3; filter:alpha(opacity=30);}
+.mainContentWrapper{width: 940px; height:240px;  margin: auto; padding:25px 0 0 40px;}
+.mainContentWrapperLeft{width: 380px; height: 240px; padding: 0 90px 0 0;float: left;}
+.mainContentWrapperRight{width: 330px; height: 210px; float: left; padding: 30px 140px 0 0;}
+.mainContentWrapperLeft h1{font-size: 20px; color:#fff; margin: 25px 0 15px 0; font-weight: 700;}
+.mainContentWrapperLeft h2{font-size: 16px; color:#e1e1e1; margin: 0px 0 10px 0; font-weight: normal; line-height: 26px;}
+.mcwLeftNav{width: 380px; height:47px;padding: 12px 0 0 0;}
+.mcwLeftNavBtn{width: 96px; height:16px;color: #fff; display: block; float: left;font-size: 16px;padding: 9px 12px; font-weight: normal; text-align: center; border-radius: 5px; font-weight: 700; background-color:#49c612; }
+.mcwLeftNavBtn:hover{background-color: #5fd82a;}
+.mcwLeftNav span{width: 32px; height:16px;padding: 9px 15px;display: block; float: left; font-size: 16px; color: #fff;}
+.mcwLeftNavTiaoIcon{background-position: -214px -524px;width: 45px;height: 35px;position: relative;top: 15px;}
+.mcwLeftSearch{width: 240px; height: 36px; border-radius: 16px; margin-top: 10px;position: relative; background-color: #fff;opacity: 0.3;filter:alpha(opacity=30);padding: 0 20px;}
+.mcwLeftSearchInput{width: 230px;height: 36px; font-size: 16px; border: 0;}
+
+/*.mcwLeftSearch:hover{opacity: 1;filter:alpha(opacity=100);}*/
+.mcwLeftSearchIcon{background-position: 0 -15px;width: 16px ;height: 16px; position: absolute;top: 10px; right:10px;cursor: pointer; }
+/*其他结构样式 开始*/
+.mainContentWrapper1{width: 400px; height: 146px; margin: 100px auto;}
+.mainContentWrapper1 h1{color: #fff;font-size: 20px;font-weight: 700;}
+.mainContentWrapper1 h2{color: #e1e1e1;font-weight: normal;  font-size: 14px;line-height: 16px;margin: 10px 0 0;text-shadow: 0 2px 2px rgba(0,0,0,.5);}
+.mainContentWrapper1 h3{color: #e1e1e1;font-weight: normal; font-size: 18px;width: 380px;line-height: 30px;margin: 10px 0 0;text-shadow: 0 2px 2px rgba(0,0,0,.5);}
+.mainContentWrapperRight .img_intro{background-image: url(images/intro.png);display: inline-block;margin-top: -30px; width: 420px;height: 220px;}
+.mainContentWrapperRight .img_intro1{background-position: 0 -235px;}
+.mainContentWrapperRight .img_intro2{background-position: 0 -485px;}
+.mainContentWrapperRight .img_intro3{background-position: 0 -725px;}
+.mainContentWrapperRight .img_intro4{background-position: 0 -975px;}
+.mainContentWrapperRight .img_intro5{background-position: 0 0;}
+/*其他结构样式 结束*/
+
+
+
+/*登录部分 开始*/
+.loginForm{width: 330px; height: 240px;}
+.loginForm input{width: 330px; height: 48px; margin:8px 0;border: 0;font-size: 16px; font-family:"Microsoft YaHei","微软雅黑",Arial;background-color: #fff; border-radius: 3px; padding: 6px 12px;}
+.loginForm input[type="submit"]{ background-color: #06c3e3; color: #fff; text-align: center;cursor: pointer; font-weight: 600; font-size: 20px;}
+.loginForm input[type="submit"]:hover{background-color: #009dee;}
+.loginOptions{width: 330px; height: 22px;}
+.loginOptions .loginOptionsLeft{width: 115px; height: 22px;  float: left; padding: 0 0 0 15px; cursor: pointer;}
+.loginOptionsLeft .loginOptionsLeftBox{width: 22px; height: 22px;display: block; float: left; background-image: url("images/blue.png"); background-repeat: no-repeat; background-position:0 0; }
+.loginOptionsLeft .loginOptionsLeftLabel{width: 93px; height: 14px; font-size: 14px; color: #fff; padding: 4px 0 0 9px;}
+.loginOptionsLeft:hover .loginOptionsLeftBox{background-position: -24px 0;}
+.loginOptions .loginOptionsLeft .loginOptionsLeftBoxSelected{background-position: -48px 0;}
+.loginOptionsNavLabel{font-size: 14px;height: 22px;text-align: center; color: #00daff; display: block; float: right; cursor: pointer; padding: 0px 5px 0px 0;}
+.loginOptionsNavLabel:hover{ background-color: #00daff; color: #fff;}
+.loginOptions .loginOptionsRight{width: 70px;}
+.loginForm .loginFormBottom{width: 84px;}
+/*登录部分 结束*/
+
+/*底部时间轴 开始*/
+.mainBodyNavigation{width: 100%; height: 200px; position: absolute;bottom: 0;left: 0; overflow: hidden;}
+.navbackground{width: 100%; height:100%;position: relative;top: 0;box-shadow:0px 2px 3px rgba(0,0,0,0.1) inset;}
+.navtimeline{width: 2px; height: 160px; background-color: #02a5d8;z-index: 30; position: absolute;top: 0; left: 685px;}
+.navtimelineBar{width: 24px; height: 24px;position: absolute;top: -1px;z-index: 31; left: 675px; background-position: -173px -149px;}
+
+.navWrapper{width: 2000px; height:100%; position: absolute;left: -300px; top: 0; cursor: move; transition:all 0.3s ease 0;}
+.navTimeMiddle{width:1000px; height: 100%; position: relative;left: 380px;}
+.navTimeBeside{width:33.3%; height: 100%; position: relative; float: left;}
+.navTimeBottom{width: 100%; height: 40px; position: absolute; bottom: 0; border-top: 1px solid #ccc;}
+.navTimeBottomTop{width: 100%; height: 6px; position: absolute; top: -1px; background-image: url("images/time2.png");background-repeat: repeat-x;}
+.showMonth{width: 1000px; height: 30px;padding: 6px 0 0 0;margin: auto; position: relative;}
+.navtimeMon{width: 80px; height:1px; font-size: 10px; background-image: url("images/time1.png");background-repeat: no-repeat; background-position: left top; text-align: left; 
+text-indent: -12px; padding: 10px 0 0 0;color: #666; float: left;}
+
+.navTimeContent{width: 1000px;height: 160px; margin: auto;position: relative;}
+.mark {position: absolute;top: 0;left: 621px; display: block;}
+.mark .flag{width:153px; height: 50px;cursor: pointer; position: absolute; top:60px; left: 3px;z-index: 2; background-position: 0px -180px; background-repeat: no-repeat;}
+.mark .flagContent{width:140px; height: 43px; padding: 5px 7px 2px 6px; position: relative;display: table; overflow: hidden;}
+.underway .icon_underway{background-position:-215px -257px; width: 20px; height: 20px; display: inline-block;
+ position: relative; top: 12px; margin: 0 8px; }
+ .success .icon_success{background-position:-172px -185px; width: 20px; height: 20px; display: inline-block;
+ position: relative; top: 12px; margin: 0 8px; }
+
+.mark .navtimeTitle{font-size: 12px;line-height: 16px;color: #666;font-weight: 700;-webkit-font-smoothing: antialiased;
+width: 114px;display: table-cell;vertical-align: middle;word-break: break-word;overflow: hidden;}
+.mark .line{width: 1px; height: 160px; background-color: #fff; position: absolute;top: 0;left: 0;z-index: 1;} 
+.selected.underway .flag{background-position: 0 -375px;}
+.selected.success .flag{background-position: 0 -231px;}
+.selected .icon_underway{background-position:-215px -288px;}
+.selected .icon_success{background-position:-172px -220px;}
+.selected .navtimeTitle{color: #fff;}
+.selected.underway .line{ background-color: #03a9ff;}
+.selected.success .line{ background-color:#aad808;}
+
+
+
+
+
+@keyframes logoRotate
+{
+	from{-webkit-transform: rotate(0deg);}
+	to{-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes logoRotate /* Firefox */
+{
+	from{-webkit-transform: rotate(0deg);}
+	to{-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes logoRotate /* Safari 和 Chrome */
+{
+	from{-webkit-transform: rotate(0deg);}
+	to{-webkit-transform: rotate(360deg);}
+}
+
+@-o-keyframes logoRotate /* Opera */
+{
+	from{-webkit-transform: rotate(0deg);}
+	to{-webkit-transform: rotate(360deg);}
+}
+
+
+@keyframes ceshilogo
+{
+0%   {top: 3px;}
+50% {top: 6px;}
+100%{top: 3px;}
+}
+
+@-moz-keyframes ceshilogo /* Firefox */
+{
+0%   {top: 3px;}
+50% {top: 6px;}
+100%{top: 3px;}
+}
+
+@-webkit-keyframes ceshilogo /* Safari 和 Chrome */
+{
+0%   {top: 3px;}
+50% {top: 6px;}
+100%{top: 3px;}
+}
+
+@-o-keyframes ceshilogo /* Opera */
+{
+0%   {top: 3px;}
+50% {top: 6px;}
+100%{top: 3px;}
+}
+
+

@@ -1,0 +1,284 @@
+*{ margin: 0; padding: 0; font-family: 微软雅黑, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+ul,li{ list-style: none;}
+a{display: block; text-decoration: none;}
+
+
+
+/*背景设置*/
+.black{ width: 100%; min-width: 960px; height: 100%; height: 667px; background-image: url("images/fullbody.png");}
+#bgAllImage{ width: 100%;}
+.bgAllImage{ width: 100%; height: 100%; height: 667px;transition: all 0.2s ease-out;position: absolute;left: 0;top: 0;}
+.bgAllImage img{transition: all 0.2s ease-out;}
+.wrap{ width: 1000px; height: 100%;margin: 0 auto;}
+
+/*左侧QQ主面板*/
+.QQmainPanel{ width: 280px; height: 100%;float: left;}
+
+.mainPanel{ width: 280px; height: 80%;position: relative;top: 12%;left: 0;border-radius: 7px;background: #fff;}
+.panelBodyContainer{ width: 100%; position: absolute;bottom: 50px;left: 0;height: 484px;}
+.panelFooter{ width: 100%;position: absolute;bottom: 0;left: 0;height: 50px;background-image: linear-gradient(rgb(220,220, 220), rgb(150, 150, 150));border-radius: 0 0 6px 6px;}
+.panelBody{ width: 100%; height: 100%; position: relative;}
+
+
+/*个人信息显示区*/
+.accountHeader {z-index: 1001;position: absolute;display: block;width: 100%;top: -50px;}
+.avatarWrap{ width: 40px;height: 40px;border-radius: 50%; left: 20px;top: -22px;position: absolute;border: 3px solid #fff;}
+.avatarWrap img{width: 40px;height: 40px;border-radius: 50%;}
+.userOnlineState{position: absolute;right: 0;bottom: 0;}
+.textUserNick{ margin-left: 77px;top: -21px;font-size: 16px;line-height: 16px; position: absolute;overflow: hidden;height: 22px;width: 148px; }
+.textUserShuoShuo{ margin-left: 77px;top: 4px;font-size: 12px;line-height: 12px; position: absolute;overflow: hidden;height: 22px;width: 148px; }
+
+.iconsList{ position: absolute;left: 20px;top: 30px; display: inline-block;}
+.iconsList a{ text-indent: -9999px;float: left;margin-right: 8px;width: 15px;height: 20px;background-image: url("../images/icons_list.png");background-repeat: no-repeat;}
+.iconsList .i_qzone {background-position: 0 0;}
+.iconsList .i_mail {background-position: -20px 0;}
+.iconsList .i_weibo {background-position: -40px 0;}
+.iconsList .i_video {background-position: -60px 0px;}
+.iconsList .i_qqwebsite {background-position: -81px 0px;}
+.iconsList .i_music {background-position: -103px 0;}
+.iconsList .i_wallet {background-position: -124px 0;}
+.iconsList .i_pengyou {background-position: -144px 0;}
+.iconsList .i_weiyun {background-position: -166px 0;}
+
+/*主要面板*/
+.panel{ width: 100%;height: 100%;position: absolute;top: 60px;left: 0;display: none;}
+.selectPanel{display: block; }
+
+.panelHeader{position:absolute;top: 0; left: 0; width: 100%;height: 45px; border-radius: 6px 6px 0 0; background-color: #17b4eb;z-index: 100;}
+#headerTitle{width: 230px;height: 18px; padding: 13px 30px 13px 20px;font-weight: 400;font-size: 18px;line-height: 100%;text-align: center;color: #fff;}
+#sousuoBar{width: 90%; height: 40px;padding:8px 5% 0px 5%; z-index: 100;  position: absolute; left: 0; top: 45px; background-color: #eaeceb;}
+.sousuoText{outline: none; width: 100%; height: 30px; border:1px solid #d9d9d9; border-radius: 5px;}
+.panelBodyWrapper1{ top:30px; position:absolute;left: 0;width: 100%;bottom: 0;}
+.panelBodyWrapperBox{ width: 100%; min-height: 100%;position: relative;}
+.currentChatScrollArea{ width: 100%;position: absolute;top: 0;left: 0;bottom:50px;overflow: hidden;}
+#menban{width:100%;height:100%; position:absolute; z-index:999; background-color:#333;opacity: 0.3; padding:0 0 100px 0; display:none;}
+
+
+/*conversation会话面板*/
+.currentChatList{ width: 100%;position: relative;box-sizing: border-box;background: #fff;overflow: auto;height: 100%;}
+.listItem{cursor: pointer; position: relative;border-bottom: 1px solid #ddd;padding: 0.15em 1px;line-height: 100%;cursor: pointer;background-color:#fff; width: 100%;height: 56px;overflow: hidden;box-sizing: border-box;}
+.avatar{ width: 40px; height: 40px;display: block;border-radius:20px; float: left;margin: 8px;position: relative;}
+.avatar img{width: 40px; height: 40px;display: block;border-radius:20px;}
+.offline img{-ms-filter: grayscale(1);-webkit-filter: grayscale(1);filter: Gray;}
+.memberNick{ width: auto;height: 23px; line-height: 23px;padding: 6px 0 0 5px;font-size: 16px;color: #000;overflow: hidden; display: inline-block;}
+.memberMsg{ overflow: hidden;font-size: 12px;color: #aaa;line-height: 28px;padding-left: 5px;text-align: left;}
+.memberNick span{color: #aaa;line-height: 17px;font-size: 12px;}
+.chatMessage{display: none;}
+/*.deleteConversation{opacity:0;width: 0px;height: 100%; font-size: 18px; padding: 20px; box-sizing:border-box; background-color: rgb(255,94,72); color: #fff;position: absolute; right: 0;top: 0; z-index: 11; float: right; text-align: center;}
+*/
+.deleteConversation{display: none; width:50px;height: 100%;background-image: url("images/delete.png");background-origin: content-box; background-repeat: no-repeat; padding: 15px; box-sizing:border-box;  position: absolute; right: 0;top: 0; z-index: 11; float: right; text-align: center;}
+
+
+/*contact联系人面板*/
+.memberTabTitle{width: 100%; height: 50px; position: absolute;background-color:#fff; left: 0;top: 0;}
+.memberTitle{width: 33.33%; height: 50px;box-sizing:border-box;cursor: pointer; font-size: 16px; padding:16px 0 16px 0; border-bottom:1px solid #ccc; float: left; text-align: center;}
+.memberTabSelected{color: #17b4eb; border-bottom: 2px solid #17b4eb;}
+
+.memberTabBody{width: 100%;height:85%; position: absolute; overflow: auto; top: 50px; left: 0;}
+.memberTabBody-friend{display: none;}
+.memberTabBody-group{display: none;}
+.memberTabBody-discuss{display: none;}
+
+.memberTabBody li{width: 100%;}
+.memberTabBody .active{display: block;}
+.memberList-friend{ position: relative;}
+.friendlist{  display: block;}
+.friendlistTitle{ display: block;  padding: 10px 28px 12px 28px;box-sizing:border-box; text-align: left;
+ background: url("images/open_arrow.png") no-repeat;background-position: -18px 3px;border-bottom: 1px solid #ccc; cursor: pointer; background-size: 14px 14px;background-origin:content-box;}
+.friendlistName{width: auto;  font-size: 16px; line-height: 16px; text-align: left;}
+.onlinePercent{width: auto; font-size: 12px; line-height: 16px; text-align: right; float: right; color: gray; }
+.member_signature{padding-right: 6px !important;}
+.friendlistBody{display: none;}
+.memberList-friend .active .friendlistBody{display: block;}
+.memberList-friend .active .friendlistTitle{ background: url("images/open_arrow_fire.png") no-repeat;background-position: -18px 3px;border-bottom: 1px solid #ccc; cursor: pointer; background-size: 14px 14px;background-origin:content-box;}
+
+
+/*plugin控件面板*/
+.panel-plugin{top: 45px;}
+.panel-plugin .panelBodyWrapper1{ top:0px; }
+#plugin-list{width: 100%; position: absolute; left: 0;top: 0px;z-index: 101;}
+.plugin-Item{width: 93px; height: 93px;position: relative; background-color: #fff; float: left; cursor: pointer;}
+#qzone .icon{background-image: url("images/plugin_icon_qzone.jpg");}
+#qmail .icon{background-image: url("images/plugin_icon_qmail.jpg");}
+#qqportal .icon{background-image: url("images/plugin_icon_qq_portal.png");}
+#plugin-list .plugin-Item .icon{width: 100%; height: 100%; background-size: 60%;background-repeat:no-repeat; background-position:center 18%;display: block;  position: absolute; left: 0; top: 0; }
+.plugin-Item a{position: absolute;left: 0; bottom: 6px; width: 100%;height: 19px; line-height: 19px; font-size: 13px;text-align: center;display: block; }
+
+
+
+/*setup设置面板*/
+.panel-setup{top: 45px;}
+.panel-setup .panelBodyWrapper1{ top:0px; z-index: 101;bottom: 40px; }
+.panel-setup .currentChatScrollArea{overflow: auto; bottom: 0;}
+.group{padding: 10px; background-color: #fff; z-index: 101;}
+.row{border-radius: 5px; width: 100%;background: #fff;  border: 1px solid #afc8e2;padding: 10px; box-sizing:border-box;}
+.row1{height: 80px;}
+.row1Left{float: left;}
+.row1Middle{float: left;}
+.row1Right{float: right;position: relative;height: 20px;margin-top: 30px;font-size: 12px;
+cursor: pointer;}
+.rowAvatarName{font-size: 1.2em;line-height: 1.6em;}
+.rowAvatarCount{color: #666;font-size: .9em;}
+.down_arrow{width: 10px;height: 10px;background-image: url("images/state_sprite.gif");background-repeat: no-repeat;background-position: -162px 4px;float: left;cursor: pointer;}
+.changeOnlineIcon{display: none; position: absolute;border: 1px solid #afc8e2;border-radius: 3px; top: 12px;left: -39px;background: #fff;width: 70px;}
+.changeOnlineIcon li{padding: 5px 3px;cursor: pointer;}
+.changeOnlineIcon li:hover{background-color:#cddeee;}
+.iconState{display: block;width: 10px;height: 10px;margin-top: 2px; background-image: url("images/state_sprite.gif");background-repeat: no-repeat;float: left;margin-right: 2px;}
+.online_icon{background-position: 0 0;}
+.callme_icon{background-position: -72px 0;}
+.away_icon{background-position: -18px 0;}
+.busy_icon{background-position: -36px 0;}
+.silent_icon{background-position: -108px 0;}
+.hidden_icon{background-position: -54px 0;}
+.offline_icon{background-position: -90px 0;}
+
+
+.row2{height:auto;min-height: 40px; overflow: hidden; line-height: 22px;}
+.row2 span{color: #666;float: left;width: 80px;}
+
+.row3{height: 38px; cursor: pointer;}
+.row4{height: 38px; cursor: pointer;}
+.more_icon{float: right;width: 16px;height: 16px;background-image: url("images/open_arrow.png"); background-repeat:  no-repeat; background-position:  center;background-size: 100% 100%;margin-left: 10px;}
+.aboutqq{display: none;}
+.row5{padding: 0;}
+.aboutqqrow{height: 38px;box-sizing:border-box; padding: 10px; border-bottom: 1px solid #afc8e2;}
+.aboutqqrow3{border-bottom: 0;}
+.aboutqqrowbanben{color: #666;float: left;width: 80px;}
+
+.loginout{cursor: pointer; background-image: linear-gradient(rgb(247, 70, 52), rgb(206, 39, 21));background-origin: padding-box;background-size: auto;text-align: center; color: #fff;}
+
+
+
+/*面板切换区*/
+#navTab{ width: 100%;height: 100%;display: block;}
+.navTHead{ width: 100%;height: 100%;display: block;}
+#navTab #conversation{border-left: 0;border-radius: 0 0 0 6px;}
+#navTab #setup{border-right: 0;border-radius: 0 0 0 6px;}
+#navTab .navBtn{ width: 68px;float: left;display: list-item; position: relative;overflow: hidden;box-flex: 1;height: 50px;color: #666;font-size: 14px;text-align: center;cursor: pointer;}
+#navTab .navBtnSelected{background-image: linear-gradient(rgb(220,220, 220), rgb(150, 150, 150));color: #fff;}
+#navTab li a{display: inline-block;overflow: hidden;height: 100%;position: relative;text-align: center;}
+.icon{ display: inline-block;width: 34px;height: 34px;background-size: 100% 100%; }
+#navTab a span{display: block;position: relative;bottom: 4px;width: 100%;font-size: 12px;color: #757575;line-height: 12px;}
+#conversation .icon{background-image: url("images/tab_icon_conversation.png");}
+#contact .icon{background-image: url("images/tab_icon_contact.png");}
+#plugin .icon{background-image: url("images/tab_icon_plugin.png");}
+#setup .icon{background-image: url("images/tab_icon_setup.png");}
+#navTab .navBtnSelected .icon{background-image: url("images/tab_icon_conversation_selected.png");}
+.unreadMsgTip{width: 14px; height: 14px; color: #d97911; font-size: 12px; text-align: center;padding: 0; 
+	background-image: url("images/systemmsg_unread.png");background-size: 100% 100%; background-repeat: no-repeat; position: absolute;top: 0px; right: 5px;}
+.listItem-chat .unreadMsgTip{right: -10px; top: -4px;}
+
+
+.changBg{position: absolute;bottom: -44px;width: 55px; height: 21px; display: block;}
+.change{width: 19px;height: 19px;margin: 0 3px;overflow: hidden;background: url("../images/arrow.png") no-repeat;display: inline-block;text-decoration: none;float: left;}
+.changBgFre{ background-position: -2px -2px; }
+.changBgFre:hover{ background-position: -3px -42px; }
+.changBgNext{ background-position: -25px -2px; margin-left: 8px;}
+.changBgNext:hover{ background-position: -26px -42px; }
+.suggestion{height: 12px; position: absolute;right: 0;font-size: 12px;background: rgba(0,0,0,.5);padding: 2px 0;border-radius: 10px;bottom: -40px;display: block;color: #000;width: 80px;text-align: center;left: 50%;margin-left: -40px;}
+.suggestion a{font-size: 12px;color: #fff;line-height: 12px;display: block;}
+
+
+/*左侧 结束*/
+
+/*右侧*/
+#talkContainer{width: 700px; height: 100%; margin-left: 20px;float: left;position: relative;} 
+#chatPanel{display: none; width: 100%;height: 80%;top: 12%;left: 0;position: absolute; z-index: 9999;}
+
+#panelHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative;cursor: default; background-color: #17b4eb;}
+#panelLeftButton{width: 51px;height: 19px;padding: 6px 10px;border-radius: 5px;margin: 5px 0 7px 15px;float: left;position: relative;cursor: pointer; }
+#panelLeftButtonI{ width: 14px; height: 14px; margin: 0 4px;display: block;background-image: url("../images/pannel-arrow-down.png");background-size: 100% 100%;}
+
+#panelTitle{ display: block; width:471px; height: 18px;padding: 13.5px 30px 13.5px 20px;float: left;text-align: center;font-size: 18px;color: #fff;line-height: 18px;font-weight: normal;}
+#panelRightButton{cursor: pointer; width: 57px;height: 19px;padding: 6px 10px; vertical-align : center; border-radius: 5px;margin: 5px 10px 7px 2px;float: left;position: relative; }
+#panelRightButtonI{  max-width: 100px; width: auto; height: 14px; line-height: 18px;  text-align: center; display: block;font-size: 14px;color: #fff;}
+
+#panelBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 50px; left: 0;height: auto; overflow: hidden;}
+#panelBodyBox{  width: 100%; height: 440px;position: relative;background: rgba(250,250,250,1); overflow: auto;}
+.chatTime{ text-align: center;width: 100%; height: 37px; }
+.chatTime span{color: rgba(255,255,255,0.8);background: rgba(0,0,0,0.3);padding: 2px 8px;display: inline-block;margin: 10px;font-size: 13px;border-radius: 8px;}
+.chatContentSelf{text-align: right;padding: 10px;width: 660px;height: auto;}
+.chatContentOther{text-align: left;padding: 10px;width: 660px;height: auto;}
+.chatContentSelf .avatarImg{ width: 40px; height: 40px;border-radius: 50%; margin-left: 10px;float: right;}
+.chatContentOther .avatarImg{ width: 40px; height: 40px;border-radius: 50%;margin-right: 10px;float: left;}
+.chatContentSelf .chatNick{font-size: 12px;margin: 0 0 10px;width: 100%;height: 12px; line-height: 12px;text-align:right;}
+.chatContentOther .chatNick{font-size: 12px;margin-left: 5px; margin-bottom: 10px; width: 100%;height: 12px;line-height: 12px;text-align: left;}
+.chatContent{position: relative; text-align: left; display: inline-block; min-height: 16px;max-width: 70%;color: #333; background-color: #17b4eb;border-radius: 10px;padding:3px 10px;word-break: break-all;line-height: 1.4; }
+.chatContentsanjiao{width: 4px; height: 4px; border-radius: 4px; border:1px solid #17b4eb; background-color: #fff; position: absolute; left: -6px; top: -6px; z-index: 0;}
+
+
+
+.pannelMenuList{position: absolute;width: 100%;height: 80px;z-index: 1000; left: 0;top: 45px;overflow: hidden;background-color:rgb(199,237,233); display: none;}
+.pannelMenuList li {height: 80px;width: 80px;text-align: center;float: left;font-size: 12px;cursor: pointer;color: #333;}
+.menuListIcon{width: 40px;height: 40px;margin: 10px auto 5px;background-image: url("images/menu_icons.png");background-repeat: no-repeat;}
+.menuListIcon1{background-position: -128px 3px;}
+.menuListIcon2{background-position: -43px 2px;}
+.menuListIcon3{background-position: -90px 2px;}
+
+
+#setupPanel{display: none; width: 100%;height: 80%;top: 12%;left: 0;position: absolute; z-index: 9999;}
+#setuppanelHeader{width: 100%;height: 45px; border-radius: 6px 6px 0 0;position: relative;cursor: default; background-color: #17b4eb;}
+#setuppanelLeftButton{width: 51px;height: 19px;color: #fff; padding: 6px 10px;border-radius: 5px;margin: 5px 0 7px 15px;float: left;position: relative;cursor: pointer; }
+#setuppanelLeftButton a{float: left; width: 28px; height: 19px; display: block; font-size: 14px;}
+#setuppanelLeftButtonI{transform:rotate(90deg);float: left; width: 14px; height: 14px; margin:4px 5px 0 0 ;display: block;background-image: url("../images/pannel-arrow-down.png");background-size: 100% 100%;}
+#setuppanelTitle{ display: block; width:471px; height: 18px;padding: 13.5px 30px 13.5px 20px;float: left;text-align: center;font-size: 18px;color: #fff;line-height: 18px;font-weight: normal;}
+#setuppanelBodyWrapper{ width: 100%;position: absolute;top: 45px; bottom: 0px; left: 0;height: auto;}
+#setuppanelBodyBox{  width: 100%; height: 100%;position: relative;background: #ededed; overflow: auto; }
+#setuppanelBodyBox .group{background-color:#ededed; }
+.setupRow1{height: 40px; overflow: hidden; line-height: 22px;border-radius: 5px 5px 0 0;}
+.setupRow2{height: 40px; overflow: hidden; line-height: 22px;border-radius: 0 0 5px 5px; border-top: 0;}
+.setupRow3{height: 60px; overflow: hidden; line-height: 22px;}
+.setupRow4{height: 40px; overflow: hidden; line-height: 22px;}
+.lable{width: 80px; color: #666; float: left; display: block;}
+
+.switch{outline: none; width: 56px;height: 24px; display: inline-block; position: relative; float: right;}
+.checkBoxStyle{outline: none; width: 100%; height: 100%; box-sizing:border-box; margin: 0; cursor: pointer; border-radius: 96px; -webkit-appearance:none; }
+.switch-white input{background-image: linear-gradient(#d0d0d0,#dfdfdf);}
+.switch-white span{background-image: linear-gradient(#fff,#f1f1f1);}
+.switch span{position: absolute; top: 0; left: 30px; margin-top: 1px; width: 22px; height: 22px; border-radius:25px; pointer-events:none; transition: left .1s linear }
+.switch-white input:checked{background-image: linear-gradient(#5393c5,#6facd5);}
+.switch input:checked~span {left: 3px;}
+.setupRow3 p{color: #666; width: 100%; height: 50%;}
+.setupRow3 p .huanhangLable{float: left; display: block; width: 100%; text-align: left;}
+.setupRow4 .huanhangLable{float: left; display: block; width: 80%; color: #666; text-align: left;}
+
+#panelFooter{ width: 100%; height: 50px; position: absolute; left: 0;bottom: 0;border-radius: 0 0 6px 6px;background-image: linear-gradient(rgb(220,220, 220), rgb(150, 150, 150));}
+.chat_toolbar{ width: 100%; height: 100%;padding: 3px 10px 5px 6px;box-sizing: border-box;}
+.addFaceBtn{width: 38px; height: 32px; padding: 5px; float: left;}
+.addFaceBtnImg{width: 30px;height: 30px; margin: 0 4px; display: block; background-size: 100% 100%; cursor: pointer; background-image: url("images/chat_bottombar_icon_face.png"); }
+.chatInputArea{outline: none; width: 540px; height: 22px; margin: 5px 10px 5px 6px; padding: 5px 10px; display: block; border-radius: 5px; resize:none; overflow:hidden; float: left;}
+.sendMessageBtn{outline: none; width: 50px; height: 30px;padding: 6px 10px;color: #fff; font-size: 12px; margin: 7px 0; background-color: #17b4eb; float: left;display: block;vertical-align: middle; border-radius: 5px; border: 0;}
+
+
+
+/*表情*/
+.qq_face_area {display: block;width: 700px;text-align: center;margin: 0 auto;overflow: hidden;width: 100%;text-align: center;
+	margin: 0 auto;overflow: hidden;cursor: pointer;}
+
+.wrap {width: 1000px;height: 100%;margin: 0 auto;-webkit-transition: all 0.2s ease-out;}
+.qq_face_area .wrap li {list-style: none;height: 280px;float: left;display: none; }
+.faceIteam {width: 700px;background-size: 100% 80%; list-style: none;height: 144px;float: left;background-repeat: no-repeat;}
+.faceIteam1 {background-image: url("images/1.jpg");}
+.faceIteam2 {background-image: url("images/2.jpg");}
+.faceIteam3 {background-image: url("images/3.jpg");}
+.faceIteam4 {background-image: url("images/4.jpg");}
+.faceIteam5 {background-image: url("images/5.jpg");}
+.faceIteam6 {background-image: url("images/6.jpg");}
+.qq_face_area .wrap .selectedFace{display: block;}
+.btnsWrap {padding: 0 0 10px 0px;background: rgba(34,34,34,.7);}
+.qq_face_area ul li i {width: 99px;height: 74px;display: block;float: left;}
+.qq_face_area ul li i:hover{border: 1px solid #5f9cc5;}
+.btnsWrap {padding: 0 0 10px 290px; height:15px;  background: rgba(34,34,34,.7);}
+.btnsWrap>li {float: left;list-style-type: none;margin: 5px 10px 0 0;padding: 2px;width: 10px;height: 10px;-webkit-border-radius: 10px;-moz-border-radius: 10px;-ms-border-radius: 10px;border-radius: 10px;background: gray;}
+.btnsWrap>li.selected {background: #000;}
+
+
+
+
+
+
+
+
+
+
+/*Right end*/
