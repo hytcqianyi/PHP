@@ -30,6 +30,7 @@ body{font-family: 楷体;}
 .friendname{height: 20px;line-height: 20px;width: 70px;float: left;font-size: 15px;font-family: 楷体;margin-top: 10px;}
 .friendli img{float: left;display: block;}
 .xiugaifriend{height: 20px;line-height: 20px;width: 80px;float: left;font-size: 12px;font-family: "microsoft yahei","宋体","arial";margin-top: 10px;}
+.xiugaidriend:hover{border-radius: 5px;background-color:#17b4eb;color: #fff;cursor: pointer;text-decoration: underline;}
 
 .message{width: 150px;height: 60px;padding: 10px;float: left;display: block;}
 .mesnicheng{height: 20px;line-height: 20px;width: 200px;float: left;font-size: 15px;font-family: 楷体;}
@@ -89,6 +90,10 @@ body{font-family: 楷体;}
 .choose{width: 80px;height: 20px;position: absolute;top: 150px;left: 20px;}
 .myHeadImage-alter{width: 80px;height: 80px;}
 
+#altermessbox-friend{width: 300px;height: 200px;border-radius: 7px;border:1px solid #17b4eb;margin-left: 50px;margin-top: 100px; display: none;}
+.alterTitle-friend{width: 250px;height: 40px;line-height: 40px;text-align: center; font-weight: bold;font-family: "microsoft yahei","宋体","arial";font-size: 12px;background-color: #17b4eb;color: #fff;border-top-left-radius: 5px;float: left;display:block;}
+.alterContentM{width: 250px;height:160px; float:left;display: block;}
+.closealter-friend{width: 50px;height: 40px;line-height: 40px;text-align: center;color: #fff;background-color: #17b4eb;float: left;display:block;border-top-right-radius: 5px;font-family: "microsoft yahei","宋体","arial";font-size: 12px;cursor: pointer;}
 
 
 /*右侧*/

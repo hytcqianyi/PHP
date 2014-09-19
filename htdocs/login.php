@@ -14,12 +14,24 @@
 <body>
       
       <form id="foreground" action="index.php" method="post">
-        <div id="foretop"><span class="forelogin">登陆web账号</span></div>
-        <div id="forebottom">
+        <div id="foretop">
+          <span class="forelogin">登陆</span>
+          <span class="line">/</span>
+          <span class="foreregister">注册</span>
+        </div>
+        <!-- <div id="forebottom" class="denglu">
           <div id="bot">
             <div class="foreid"><input name="userid" type="text" id="txtUserid" /></div>
             <div class="forepwd"><input name="userpwd" type="password" id="txtUserPwd" /></div>
             <div class="foredenglu"><input type="submit" value="登录" /></div>
+          </div>
+        </div> -->
+        <div id="forenewbottom" class="zhuce">
+          <div id="bott">
+             <div class="foreidR">
+                
+                <input name="userid" type="text" id="txtUserid" />
+             </div>
           </div>
         </div>
       </form>

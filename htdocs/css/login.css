@@ -5,8 +5,12 @@ a{text-decoration: none;}
 
 
 #foreground{width: 400px;height: 300px;border: 1px solid #ccc;margin:0 auto;margin-top: 100px;}
-#foretop{width: 400px;height: 40px;border-bottom: 1px solid #ccc;}
+#foretop{width: 400px;height: 40px;border-bottom: 1px solid #ccc; }
 .forelogin{line-height: 40px;font-family:宋体,Airal;float: left;display: block;font-weight: bold; margin-left: 20px;font-size: 16px;}
+.forelogin:hover{text-decoration: underline;}
+.line{line-height: 40px;font-family:宋体,Airal;float: left;display: block;font-weight: bold; margin-left: 10px;font-size: 16px;}
+.foreregister{line-height: 40px;font-family:宋体,Airal;float: left;display: block;font-weight: bold; margin-left: 10px;font-size: 16px;}
+.foreregister:hover{text-decoration: underline;cursor: pointer;}
 #forebottom{width: 400px;height: 250px;}
 #bot{width: 300px;height: 100px;margin: 50px 50px 100px 50px;/*border: 1px solid #ccc;*/}
 .foreid input{width: 250px;height: 30px;}
@@ -17,6 +21,11 @@ a{text-decoration: none;}
 .foredenglu{width: 250px;height: 40px;margin-top: 30px;border: 1px solid #ccc;margin-left: 20px;border-radius: 3px;/*background-image:url("image/denglu.jpg")*/;}
 .foredenglu input{width: 250px;height: 40px;}
 
+
+#forenewbottom{width: 400px;height:250px;}
+#bott{width: 400px;height: 70px;margin: 50px 50px 100px 50px;}
+.foreidR{width: 250px;height: 30px;border: 1px solid #CCC;margin-left:20px;margin-top: 10px;}
+.foreidR input{width: 250px;height: 30px;}
 /*<form  action="index.php" method="post">
      	  <input name="userid" type="text" id="txtUserid" />
      	  <input name="userpwd" type="password" id="txtUserPwd" />

@@ -1,32 +1,23 @@
 // function tiao(){
 // 	alert("fail");
 // }
-$(function(){
 
-  
-  // $.ajax({
-  //   url:"gettq.php",
-  //   type:"POST",
-  //   success:function(res){
-  //     alert(res);
-  //   }
-  // });
-});
 
 
 $(function(){
     iniDelegate();
     setInterval('getUnreadMsg()',1000);
-    //getUnreadMsg();
-   // var str=""1+1;
-   //getnewmessage();
     altermessage();
     setInterval('getnewmessage()',5000);
-
-   $(".close").click(function(){
+    alterfriend();
+    $(".close").click(function(){
       $("#chatdiv").hide();
       $("#chatdiv").attr("curid","");
     });
+     $(".foreregister").click(function(){
+         $(".denglu").hide();
+     });
+  
 });
 
 function iniDelegate(){
@@ -191,5 +182,40 @@ function getnewmessage(){
 
               }
             });
+}
+
+function alterfriend(){
+   $(".xiugaifriend").click(function(){
+        $("#altermessbox-friend").show();
+        var b=$(this).parent().find(".friendName").attr("curid");
+        $("#altermessbox-friend").find(".loginername").attr("curidnew",b);
+        alert("a");
+        return false;
+   });
+   $(document).click(function(){
+      $("#chatdiv").hide();
+   });
+
+   $(".closealter-friend").click(function(){
+           $("#altermessbox-friend").hide();
+        });
+   $(".makealteration").bind('click',function(){
+       //var alterfriendnickname=$(".loginernicheng").val();
+       //alert(alterfriendnickname);
+       var bnew= $("#altermessbox-friend").find(".loginername").attr("curidnew");
+       var a=$(this).parent().parent().find(".loginernicheng").val();//将修改好的好友备注赋值给a
+       alert(a);
+       $(".friendName[curid="+bnew+"]").html(a);
+      $.ajax({
+              type:"POST",
+              url:"include/ajax.php",
+              data:{flag:'alterfriend',id:bnew,name:a},
+              success:function(res){
+                 alert(res);
+              }
+            });
+       $("#altermessbox-friend").hide();
+      // alert("a");
+   });
 }
 

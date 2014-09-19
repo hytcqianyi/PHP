@@ -12,6 +12,8 @@
    //$userpwd = isset($_POST["userpwd"])?$_POST["userpwd"]:"";
    $mynewname=isset($_POST["mynewname"])?$_POST["mynewname"]:"";
    $mynewshuoshuo=isset($_POST["mynewshuoshuo"])?$_POST["mynewshuoshuo"]:"";
+   $id=isset($_POST["id"])?$_POST["id"]:"";
+   $name=isset($_POST["name"])?$_POST["name"]:"";
 
    $db=new ezSQL_mysql();
    // $curUserID=isset($_SESSION["wodeid"])?$_SESSION["wodeid"]:"";
@@ -93,7 +95,18 @@
         die();
 
     }
-    
+     
+     //修改好友的备注
+     if($flag=='alterfriend'){
+      $sql="update friendsinfo set friendNoteName='$name' where id='$id'";
+      $res=$db->query($sql);
+      if(!$res){
+         echo "fail";
+       }else {
+         echo "ok";
+       }
+        die();
+     }
 
 
     

@@ -80,16 +80,18 @@
          ?>
        </div>
        <div id="friendList">
-      <ul id="onlinefriendslist">
+        <ul id="onlinefriendslist">
        <?php
          $db=new ezSQL_mysql();//,userinfo.userTalk
          $res=$db->get_results("select userinfo.userTalk,userinfo.id,userinfo.userState,userinfo.userNickname,userinfo.userHeadImage,friendsinfo.friendNoteName from userinfo,friendsinfo where userinfo.id=friendsinfo.friendid and friendsinfo.userid=$curid");
+         //1$ress=$db->get_results("select friendNoteName from friendsinfo where userid='$curuserid'");
          $onlineHtml="";
          $offlineHtml="";
          
          if($res)
          {
             foreach ($res as $friend) {
+               $curuserid=$friend->id;
                $curHeadImageUrl=$friend->userHeadImage;
                $curfriNickName=$friend->userNickname;
                $curfriState=$friend->userState;
@@ -100,7 +102,7 @@
                   $onlineHtml .="
                   <li friendid='$friend->id' friendNoteName='$friend->friendNoteName' class='friendli' istalking='no'>
                      <img src='$curHeadImageUrl' class='friHeadImage onlinePic' />
-                     <span class='friendName'>$friend->friendNoteName</span>
+                     <span class='friendName' curid='$curuserid'>$friend->friendNoteName</span>
                      <span class='xiugaifriend'>修改</span>
                      <span class='friendshuoshuo'>$friend->userTalk</span>
                      <div class='msghistory'></div>
@@ -114,15 +116,6 @@
                                      <span class='friendzhuangtai'>$friend->userState</span>
                                   </li>";// <span class='friendshuoshuo'>$friend->userTalk</span>
                }
-               
-               // echo "<li class='friendli' isopen='close' istalking='yes'>
-               //         <img src='$curHeadImageUrl' class='friHeadImage' />
-               //         <div class='message'>
-               //           <div class='mesnicheng'>$curfrinotename</div>
-               //           <div class='messtate'>$curfriState</div>
-               //           <div class='messhuoshuo'>$curfrishusohuo</div>
-               //         </div>
-               //       </li>";
             }
          }
          echo $onlineHtml;
@@ -175,7 +168,23 @@
                  </div>";
         ?>
         </div>
-       
+        <div id="altermessbox-friend">
+        <?php
+          echo " <div class='alterTitle-friend'>修改好友昵称</div>
+                 <div class='closealter-friend'>关闭</div>
+                 <div class='alterContent'>
+                    <div class='alterContentM'>
+                      <div class='loginerdiv'>
+                        <span class='loginername' curidnew=''>昵称：</span>
+                        <input type='text' class='loginernicheng' value=' '>
+                      </div>
+                      <div class='makesure'><button class='makealteration'>确认修改</button></div>
+                    </div>
+                    
+                 </div>";
+        ?>
+        </div>
+
     </div>
 
      <!-- <div style="width:700px;height:600px;float:right;position:relative;margin-right:100px;">
